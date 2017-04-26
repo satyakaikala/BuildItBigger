@@ -21,15 +21,9 @@ import java.io.IOException;
 public class EndPointTask extends AsyncTask<Context, Void, String> {
     private Context context;
     private static MyApi myApi = null;
-    private JokeCallBack jokeCallBack;
 
-    public EndPointTask(Context context, JokeCallBack callBack) {
+    public EndPointTask(Context context) {
         this.context = context;
-        this.jokeCallBack = callBack;
-    }
-
-    public interface JokeCallBack {
-        void onReceivedJoke(String newJoke);
     }
 
     @Override
@@ -38,7 +32,7 @@ public class EndPointTask extends AsyncTask<Context, Void, String> {
 
         if (myApi == null) {
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                    .setRootUrl("http://10.0.2.2:8080/")
+                    .setRootUrl("http://10.0.2.2:8080/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
@@ -59,7 +53,6 @@ public class EndPointTask extends AsyncTask<Context, Void, String> {
     @Override
     protected void onPostExecute(String strings) {
         super.onPostExecute(strings);
-        Log.d("joke",": " + strings);
-        jokeCallBack.onReceivedJoke(strings);
+        Log.d("joke" , " : " + strings);
     }
 }

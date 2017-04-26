@@ -1,13 +1,21 @@
 package com.sunkin.nanodproject4;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.Joker;
+import com.sunkin.myjokeslibrary.DisplayActivity;
 
-public class MainActivity extends AppCompatActivity implements EndPointTask.JokeCallBack{
+import java.util.concurrent.ExecutionException;
+
+import static com.sunkin.myjokeslibrary.DisplayActivity.JOKE_KEY;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +24,21 @@ public class MainActivity extends AppCompatActivity implements EndPointTask.Joke
     }
 
     public void tellJoke(View view) {
-        Joker joke = new Joker();
-        String msg = joke.getJoke();
-//        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        new EndPointTask(this, this).execute(this);
+        String newJoke = " ";
+        try {
+             newJoke = new EndPointTask(this).execute(this).get();
+        } catch (InterruptedException | ExecutionException e) {
+            Log.e(MainActivity.class.getSimpleName(), "Exception while retrieving new joke: %s ", e);
+        }
+
+        if (newJoke != null && newJoke.length() != 0){
+            displayJoke(newJoke);
+        }
     }
 
-    @Override
-    public void onReceivedJoke(String newJoke) {
-        Toast.makeText(this, newJoke, Toast.LENGTH_SHORT).show();
+    void displayJoke(String joke) {
+        Intent jokeIntent = new Intent(this, DisplayActivity.class);
+        jokeIntent.putExtra(JOKE_KEY, joke);
+        startActivity(jokeIntent);
     }
 }

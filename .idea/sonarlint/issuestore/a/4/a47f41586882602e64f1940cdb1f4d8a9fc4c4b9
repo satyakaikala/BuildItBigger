@@ -1,5 +1,5 @@
 
-qsquid:S1450"VRemove the "context" field and declare it as a local variable in the relevant methods.(êİç8´“…î¹+
-Isquid:S1185"(Remove this method to simply inherit it.(ı–õ¨ùÿÿÿÿ8‘‹„î¹+
-Fsquid:S1068"+Remove this unused "context" private field.(êİç8£ôäí¹+
-Gsquid:S1168"+Return an empty collection instead of null.(¥¹ï8µİƒî¹+
+Hsquid:S1313"-Make this IP "10.0.2.2" address configurable.(†ü8”ôÁº+
+Asquid:S1166"%Either log or rethrow this exception.(ï­£Ä8üÜ¿º+
+Fsquid:S1068"+Remove this unused "context" private field.(êİç8¶İÉÁº+
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(º¢™îüÿÿÿÿ8‘Ö¬½º+

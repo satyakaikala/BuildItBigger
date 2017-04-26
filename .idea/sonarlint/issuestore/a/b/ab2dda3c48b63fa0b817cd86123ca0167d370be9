@@ -1,3 +1,5 @@
 
-Dsquid:S1481"(Remove this unused "msg" local variable.(çæûÂ8¢©ªê¹+
-Ssquid:S1854"7Remove this useless assignment to local variable "msg".(çæûÂ8¢©ªê¹+
+Qsquid:S2209"5Change this instance-reference to a static reference.(çæûÂ8ãİÁº+
+Dsquid:S1481"(Remove this unused "msg" local variable.(çæûÂ8™¾äÁº+
+Fsquid:S2440"%Remove this instantiation of "Joker".(´ñÂıÿÿÿÿ8ãİÁº+
+Ssquid:S1854"7Remove this useless assignment to local variable "msg".(çæûÂ8™¾äÁº+

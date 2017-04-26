@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import static com.sunkin.myjokeslibrary.DisplayActivity.JOKE_KEY;
 
+
 /**
  * Created by skai0001 on 4/23/17.
  */
