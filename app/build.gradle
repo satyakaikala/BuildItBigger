@@ -17,6 +17,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        paid {
+            applicationId "com.sunkin.nanodproject4.paid"
+        }
+
+        free {
+            applicationId "com.sunkin.nanodproject4.free"
+        }
+    }
 }
 
 dependencies {
