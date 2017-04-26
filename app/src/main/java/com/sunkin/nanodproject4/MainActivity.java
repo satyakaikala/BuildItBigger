@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        String newJoke = " ";
+        String newJoke = null;
         try {
              newJoke = new EndPointTask(this).execute(this).get();
         } catch (InterruptedException | ExecutionException e) {
@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (newJoke != null && newJoke.length() != 0){
             displayJoke(newJoke);
+        } else {
+            throw new NullPointerException("Joke Not Found");
         }
     }
 

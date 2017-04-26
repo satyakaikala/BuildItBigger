@@ -1,11 +1,8 @@
 package com.sunkin.nanodproject4;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
-
-
 import com.example.skai0001.myapplication.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -19,7 +16,7 @@ import java.io.IOException;
  */
 
 public class EndPointTask extends AsyncTask<Context, Void, String> {
-    private Context context;
+    protected Context context;
     private static MyApi myApi = null;
 
     public EndPointTask(Context context) {
