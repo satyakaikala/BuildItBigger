@@ -1,0 +1,5 @@
+
+qsquid:S1450"VRemove the "context" field and declare it as a local variable in the relevant methods.(êİç8´“…î¹+
+Isquid:S1185"(Remove this method to simply inherit it.(ı–õ¨ùÿÿÿÿ8‘‹„î¹+
+Fsquid:S1068"+Remove this unused "context" private field.(êİç8£ôäí¹+
+Gsquid:S1168"+Return an empty collection instead of null.(¥¹ï8µİƒî¹+
