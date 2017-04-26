@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import com.example.Joker;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EndPointTask.JokeCallBack{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
     public void tellJoke(View view) {
         Joker joke = new Joker();
         String msg = joke.getJoke();
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        new EndPointTask(this, this).execute(this);
+    }
+
+    @Override
+    public void onReceivedJoke(String newJoke) {
+        Toast.makeText(this, newJoke, Toast.LENGTH_SHORT).show();
     }
 }
