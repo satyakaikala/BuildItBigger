@@ -16,28 +16,20 @@ import java.io.IOException;
  */
 
 public class EndPointTask extends AsyncTask<Context, Void, String> {
-    private static final String TAG = EndPointTask.class.getSimpleName();
     protected Context context;
     private static MyApi myApi = null;
-    private TaskListener taskListener;
-
-    public EndPointTask(Context context, TaskListener listener) {
+    private static String URL = "http://10.0.2.2:8080/_ah/api/";
+    public EndPointTask(Context context) {
         this.context = context;
-        taskListener = listener;
-
-    }
-
-    public interface TaskListener {
-        void taskFinished();
     }
 
     @Override
     protected String doInBackground(Context... contexts) {
         context = contexts[0];
-        Log.d(TAG, "Task Started");
+
         if (myApi == null) {
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                    .setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                    .setRootUrl(URL)
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
@@ -50,8 +42,6 @@ public class EndPointTask extends AsyncTask<Context, Void, String> {
         try {
             return myApi.sayHi().execute().getData();
         } catch (IOException e) {
-            taskListener.taskFinished();
-            Log.d(TAG, "Task finished with exception");
             Log.d("Exception", "Error while getting joke");
         }
         return null;
@@ -60,8 +50,6 @@ public class EndPointTask extends AsyncTask<Context, Void, String> {
     @Override
     protected void onPostExecute(String strings) {
         super.onPostExecute(strings);
-        taskListener.taskFinished();
-        Log.d(TAG, "Task Finished");
         Log.d("joke" , " : " + strings);
     }
 }

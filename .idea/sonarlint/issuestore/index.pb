@@ -1,8 +1,6 @@
 
 @
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
-l
-<app/src/main/java/com/sunkin/nanodproject4/MainActivity.java,a/b/ab2dda3c48b63fa0b817cd86123ca0167d370be9
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
 F
@@ -25,8 +23,6 @@ W
 Lbackend/src/main/java/com/example/skai0001/myapplication/backend/MyBean.java,f/8/f8f5119e485de39d97d07a3aab2a4d5004f98418
 €
 Pbackend/src/main/java/com/example/skai0001/myapplication/backend/MyEndpoint.java,f/e/fea563cdedcd600e9cbe9b6b7725c1a2ea05e92b
-t
-Dapp/src/main/java/com/sunkin/nanodproject4/MainActivityFragment.java,1/5/15942fe4ac67a98e89b4f6e49ab6103b55058781
 ƒ
 Smyjokeslibrary/src/main/java/com/sunkin/myjokeslibrary/DisplayActivityFragment.java,7/7/77b76a2d3e21697ae7d4cbc83229dc54c524f9e8
 D
@@ -35,3 +31,19 @@ l
 <app/src/main/java/com/sunkin/nanodproject4/EndPointTask.java,a/4/a47f41586882602e64f1940cdb1f4d8a9fc4c4b9
 K
 myjokeslibrary/build.gradle,7/e/7e983efdd1d06773c3d191386848db8eec987932
+P
+ app/src/paid/AndroidManifest.xml,3/e/3ebebf1fceaa30fa3b6694bd4cc89ecc31cafe29
+P
+ app/src/free/AndroidManifest.xml,2/f/2fca6a1d529a7c6032967364e76d069d5d757fbf
+w
+Gapp/src/androidTest/java/com/sunkin/nanodproject4/EndPointTaskTest.java,0/c/0cd1ceea7cb177a760b82b0bbc6f6e5c078bcf6b
+l
+<app/src/free/java/com/sunkin/nanodproject4/MainActivity.java,d/c/dc32cc0b9c3d9e06443330b9d43cc955cd886385
+Y
+)app/src/free/res/layout/fragment_main.xml,2/6/269307a1a6ce5a8c0559445085102820aec1dbd7
+I
+app/src/paid/build.gradle,c/2/c2df09e38beda792badc1efe0edff97f5781b17b
+t
+Dapp/src/paid/java/com/sunkin/nanodproject4/MainActivityFragment.java,9/1/91a013cdd340b91b946d82fb1c3f490c4e00856a
+l
+<app/src/paid/java/com/sunkin/nanodproject4/MainActivity.java,b/9/b983a37967cdb81efc7d6705c1408c772bd1a8a8

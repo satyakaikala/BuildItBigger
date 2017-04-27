@@ -24,6 +24,7 @@ public class EndPointTaskTest {
 
     @Before
     public void setUp() throws Exception {
+
         endPointTask = new EndPointTask(context);
         endPointTask.context = context;
     }

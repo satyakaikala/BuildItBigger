@@ -13,7 +13,7 @@ import java.util.concurrent.ExecutionException;
 
 import static com.sunkin.myjokeslibrary.DisplayActivity.JOKE_KEY;
 
-public class MainActivity extends AppCompatActivity implements EndPointTask.TaskListener{
+public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity implements EndPointTask.Task
         String newJoke = null;
         try {
              progressBar.setVisibility(View.VISIBLE);
-            Log.d(TAG, "Showing progress");
-             newJoke = new EndPointTask(this, this).execute(this).get();
+            Log.d(TAG, "hiding progress");
+             newJoke = new EndPointTask(this).execute(this).get();
         } catch (InterruptedException | ExecutionException e) {
             Log.e(TAG, "Exception while retrieving new joke: %s ", e);
         }
@@ -45,15 +45,10 @@ public class MainActivity extends AppCompatActivity implements EndPointTask.Task
     }
 
     void displayJoke(String joke) {
+        progressBar.setVisibility(View.GONE);
         Intent jokeIntent = new Intent(this, DisplayActivity.class);
         jokeIntent.putExtra(JOKE_KEY, joke);
         startActivity(jokeIntent);
 
-    }
-
-    @Override
-    public void taskFinished() {
-        Log.d(TAG, "hiding progress");
-        progressBar.setVisibility(View.GONE);
     }
 }

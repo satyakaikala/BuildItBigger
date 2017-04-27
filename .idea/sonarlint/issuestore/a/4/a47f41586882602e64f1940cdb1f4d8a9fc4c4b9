@@ -1,5 +1,5 @@
 
-Hsquid:S1313"-Make this IP "10.0.2.2" address configurable.(†ü8”ôÁº+
-Asquid:S1166"%Either log or rethrow this exception.(ï­£Ä8üÜ¿º+
-Fsquid:S1068"+Remove this unused "context" private field.(êİç8¶İÉÁº+
 Wsquid:S2696"6Make the enclosing method "static" or remove this set.(º¢™îüÿÿÿÿ8‘Ö¬½º+
+isquid:S3008"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡¹Ë+8Äß‰àº+
+Asquid:S1166"%Either log or rethrow this exception.(ï­£Ä8üÜ¿º+
+Hsquid:S1313"-Make this IP "10.0.2.2" address configurable.(‡¹Ë+8Äß‰àº+
